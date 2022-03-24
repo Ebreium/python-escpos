@@ -18,5 +18,6 @@ if __name__ == "__main__":
     #p = Usb(0x0416, 0x5011, profile="TM-T88IV")
     #p = printer.Serial(devfile='/dev/usb/lp0', profile="TM-T88IV")
     p = printer.File('/dev/usb/lp0', profile='TM-T88IV')
-    p.qr(content, size=10, center=True)
+    #impl=bitImageRaster (the default) appears to give the best results
+    p.image(content, center=True)
     p.cut()

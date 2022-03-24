@@ -18,5 +18,5 @@ if __name__ == "__main__":
     #p = Usb(0x0416, 0x5011, profile="TM-T88IV")
     #p = printer.Serial(devfile='/dev/usb/lp0', profile="TM-T88IV")
     p = printer.File('/dev/usb/lp0', profile='TM-T88IV')
-    p.qr(content, size=10, center=True)
+    p.text(content)
     p.cut()
